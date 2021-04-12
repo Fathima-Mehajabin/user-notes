@@ -1,0 +1,10 @@
+<cdk-virtual-scroll-viewport itemSize="2" class="example-viewport">
+  <button
+    class="example-item btn btn-primary"
+    style="font-size: larger"
+    *ngFor="let item of items"
+    (click)="onClick(item)"
+  >
+    {{ item }}
+  </button>
+</cdk-virtual-scroll-viewport>

@@ -1,0 +1,58 @@
+<div class="container" *ngIf="note">
+  <div class="container" style="margin-top: 20px">
+    <div class="row">
+      <label for="title"> Title &nbsp; &nbsp; &nbsp; &nbsp; : </label>
+      <label for="display-title" style="margin-left: 60px">
+        {{ note.title }}</label
+      >
+    </div>
+  </div>
+
+  <div class="container" style="margin-top: 20px">
+    <div class="row">
+      <label for="content"> Content &nbsp; : </label>
+    </div>
+    <div class="row">
+      <textarea for="content" rows="5" style="width: 500px" readonly>
+ {{ note.content }} </textarea
+      >
+    </div>
+  </div>
+
+  <div class="container" style="margin-top: 20px">
+    <div class="row">
+      <label for="priority"> Priority &nbsp; : </label>
+      <label for="display-priority" style="margin-left: 60px">
+        {{ note.priority }}</label
+      >
+    </div>
+  </div>
+  <div class="container" style="margin-top: 20px">
+    <div class="row">
+      <label for="date"> Date &nbsp; &nbsp; &nbsp; : </label>
+      <label for="display-date" style="margin-left: 60px">
+        {{ note.date }}</label
+      >
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 20px">
+    <div class="col-xs-12">
+      <div class="btn-group" app-dropdown>
+        <button type="button" class="btn btn-primary dropdown-toggle">
+          Manage Notes <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a style="cursor: pointer" (click)="onClickEdit()">Edit Note</a>
+          </li>
+          <li>
+            <a style="cursor: pointer" (click)="onDeleteClick()">
+              Delete Note</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,119 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-xs-12">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!noteForm.valid"
+          >
+            Save
+          </button>
+          &nbsp;
+          <button
+            class="btn btn-danger"
+            type="button"
+            (click)="onCancelClick()"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+      &nbsp;
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="title"> Title</label>
+            <input
+              type="text"
+              id="title"
+              class="form-control"
+              formControlName="title"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="content"> Content</label>
+            <textarea
+              type="text"
+              id="content"
+              class="form-control"
+              rows="5"
+              formControlName="content"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="Priority"> Priority</label>
+            <div class="row" style="padding-top: 10px">
+              <div class="col-md-4">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    class="custom-control-input"
+                    id="high"
+                    name="priority"
+                    formControlName="priority"
+                    value="High"
+                    mdbInput
+                  />
+                  &nbsp;
+                  <label class="custom-control-label" for="high">High</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    class="custom-control-input"
+                    id="medium"
+                    name="priority"
+                    formControlName="priority"
+                    value="Medium"
+                    mdbInput
+                  />
+                  &nbsp;
+                  <label class="custom-control-label" for="medium"
+                    >Medium</label
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    class="custom-control-input"
+                    id="low"
+                    name="priority"
+                    formControlName="priority"
+                    value="Low"
+                    mdbInput
+                  />
+                  &nbsp;
+                  <label class="custom-control-label" for="low">Low</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-12 col-md-4 form-group">
+        <label for="date" style="margin-left: -12px"> Date </label>
+        <input
+          type="date"
+          style="margin-top: 10px; margin-left: -10px; width: 200px"
+          class="form-control"
+          formControlName="date"
+        />
+      </div>
+    </form>
+  </div>
+</div>
